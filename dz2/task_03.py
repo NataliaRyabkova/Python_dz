@@ -2,9 +2,9 @@
 
 n = int(input('Введите число: ')) 
 
-def sequence(n):
+def num(n):
 
     return[round((1 + 1 / x)**x, 1) for x in range (1, n + 1)]   
         
-print(sequence(n))
-print(sum(sequence(n)))
+print(num(n))
+print(sum(num(n)))
