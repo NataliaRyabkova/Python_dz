@@ -3,7 +3,7 @@
 n = input("Введите число: ")
 sum = 0
 for i in n:
-   # if i!=".":
+   if i!=".":
         sum = sum + int(i)
 print(f"Сумма цифр в числе {n} равна: ", sum)
 
