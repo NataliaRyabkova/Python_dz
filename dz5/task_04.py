@@ -31,10 +31,10 @@ def decoding(txt):
             num = ''
     return res
 
-pol6 = open('file6.txt', 'w')
+file6 = open('file6.txt', 'w')
 coding (ex5)
-pol6.write(coding(ex5))
+file6.write(coding(ex5))
 
 print(coding(ex5))
 print(decoding(coding(ex5)))
-pol6.close()
+file6.close()
