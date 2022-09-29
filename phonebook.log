@@ -1,0 +1,189 @@
+[29.09.2022 21:44:41 ] [INFO] [bot] [get_text_messages: 45] => The user has selected item number 5
+[29.09.2022 21:44:46 ] [INFO] [bot] [get_name: 90] => User entered: {name_it}
+[29.09.2022 21:44:50 ] [INFO] [bot] [get_surname: 98] => User entered: {surname_it}
+[29.09.2022 21:44:56 ] [INFO] [bot] [get_number: 106] => User entered: {number_it}
+[29.09.2022 21:45:12 ] [INFO] [bot] [get_email: 114] => User entered: {email_it}
+[29.09.2022 21:59:26 ] [INFO] [bot] [get_text_messages: 45] => The user has selected item number 5
+[29.09.2022 21:59:34 ] [INFO] [bot] [get_name: 90] => User entered: {name_it}
+[29.09.2022 21:59:38 ] [INFO] [bot] [get_surname: 98] => User entered: {surname_it}
+[29.09.2022 21:59:43 ] [INFO] [bot] [get_number: 106] => User entered: {number_it}
+[29.09.2022 22:01:39 ] [INFO] [bot] [get_email: 114] => User entered: {email_it}
+[29.09.2022 22:02:28 ] [INFO] [bot] [get_text_messages: 56] => The user has selected item number 7
+[29.09.2022 22:02:33 ] [INFO] [bot] [delete_contact: 190] => The user has selected item number 7.1
+[29.09.2022 22:02:40 ] [INFO] [bot] [delete_surname: 212] => User entered: {surname_it}
+[29.09.2022 22:02:51 ] [INFO] [bot] [delete_number: 242] => User entered: {user_id_it}
+[29.09.2022 22:03:14 ] [INFO] [bot] [get_text_messages: 45] => The user has selected item number 5
+[29.09.2022 22:03:19 ] [INFO] [bot] [get_name: 90] => User entered: {name_it}
+[29.09.2022 22:03:24 ] [INFO] [bot] [get_surname: 98] => User entered: {surname_it}
+[29.09.2022 22:03:29 ] [INFO] [bot] [get_number: 106] => User entered: {number_it}
+[29.09.2022 22:25:49 ] [INFO] [bot] [get_email: 114] => User entered: {email_it}
+[29.09.2022 23:57:08 ] [INFO] [bot] [main: 23] => The user has selected item number 2
+[29.09.2022 23:57:17 ] [INFO] [bot] [find_surname: 38] => User entered: {surname_it}
+[29.09.2022 23:59:53 ] [INFO] [bot] [main: 19] => The user has selected item number 1
+[30.09.2022 00:00:10 ] [INFO] [bot] [main: 23] => The user has selected item number 2
+[30.09.2022 00:00:25 ] [INFO] [bot] [find_surname: 38] => User entered: {surname_it}
+[30.09.2022 00:02:03 ] [INFO] [bot] [main: 29] => The user has selected item number 3
+[30.09.2022 00:14:11 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:14:17 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:14:20 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:14:26 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:14:26 ] [ERROR] [__init__] [infinity_polling: 878] => Infinity polling exception: module 'crud' has no attribute 'create'
+[30.09.2022 00:14:26 ] [ERROR] [__init__] [infinity_polling: 880] => Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 874, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 946, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 1021, in __threaded_polling
+    raise e
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 977, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 98, in run
+    task(*args, **kwargs)
+  File "c:\Users\79171\Desktop\python_dz\dz9\fonebook\bot.py", line 91, in get_number
+    cr.create(name_it, surname_it, number_it)
+AttributeError: module 'crud' has no attribute 'create'
+
+[30.09.2022 00:17:42 ] [INFO] [bot] [main: 20] => The user has selected item number 1
+[30.09.2022 00:17:49 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:17:54 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:17:57 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:18:02 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:18:02 ] [ERROR] [__init__] [infinity_polling: 878] => Infinity polling exception: module 'crud' has no attribute 'create'
+[30.09.2022 00:18:03 ] [ERROR] [__init__] [infinity_polling: 880] => Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 874, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 946, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 1021, in __threaded_polling
+    raise e
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 977, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 98, in run
+    task(*args, **kwargs)
+  File "c:\Users\79171\Desktop\python_dz\dz9\fonebook\bot.py", line 91, in get_number
+    cr.create(name_it, surname_it, number_it)
+AttributeError: module 'crud' has no attribute 'create'
+
+[30.09.2022 00:22:11 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:22:18 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:22:21 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:22:25 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:24:45 ] [INFO] [bot] [main: 20] => The user has selected item number 1
+[30.09.2022 00:28:13 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:28:25 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:28:32 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:28:38 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:32:12 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:32:23 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:32:29 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:32:38 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:34:15 ] [ERROR] [__init__] [infinity_polling: 878] => Infinity polling exception: init_data_base() got an unexpected keyword argument 'encoding'
+[30.09.2022 00:34:15 ] [ERROR] [__init__] [infinity_polling: 880] => Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 874, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 946, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 1021, in __threaded_polling
+    raise e
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 977, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 98, in run
+    task(*args, **kwargs)
+  File "c:\Users\79171\Desktop\python_dz\dz9\fonebook\bot.py", line 17, in main
+    cr.init_data_base('base_phone.csv',encoding = 'utf-8')
+TypeError: init_data_base() got an unexpected keyword argument 'encoding'
+
+[30.09.2022 00:34:23 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:34:33 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:34:38 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:34:43 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:34:43 ] [ERROR] [__init__] [infinity_polling: 878] => Infinity polling exception: [Errno 2] No such file or directory: ''
+[30.09.2022 00:34:43 ] [ERROR] [__init__] [infinity_polling: 880] => Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 874, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 946, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 1021, in __threaded_polling
+    raise e
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 977, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 98, in run
+    task(*args, **kwargs)
+  File "c:\Users\79171\Desktop\python_dz\dz9\fonebook\bot.py", line 91, in get_number
+    cr.create(name_it, surname_it, number_it)
+  File "c:\Users\79171\Desktop\python_dz\dz9\fonebook\crud.py", line 51, in create
+    with open(db_file_name, 'a', newline='') as csv_file:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+
+[30.09.2022 00:36:12 ] [ERROR] [__init__] [infinity_polling: 878] => Infinity polling exception: init_data_base() got an unexpected keyword argument 'encoding'
+[30.09.2022 00:36:12 ] [ERROR] [__init__] [infinity_polling: 880] => Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 874, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 946, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 1021, in __threaded_polling
+    raise e
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 977, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 98, in run
+    task(*args, **kwargs)
+  File "c:\Users\79171\Desktop\python_dz\dz9\fonebook\bot.py", line 17, in main
+    cr.init_data_base('base_phone.csv')
+TypeError: init_data_base() got an unexpected keyword argument 'encoding'
+
+[30.09.2022 00:36:14 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:36:20 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:36:28 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:36:33 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:36:33 ] [ERROR] [__init__] [infinity_polling: 878] => Infinity polling exception: [Errno 2] No such file or directory: ''
+[30.09.2022 00:36:33 ] [ERROR] [__init__] [infinity_polling: 880] => Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 874, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 946, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 1021, in __threaded_polling
+    raise e
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\__init__.py", line 977, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\79171\AppData\Local\Programs\Python\Python310\lib\site-packages\telebot\util.py", line 98, in run
+    task(*args, **kwargs)
+  File "c:\Users\79171\Desktop\python_dz\dz9\fonebook\bot.py", line 91, in get_number
+    cr.create(name_it, surname_it, number_it)
+  File "c:\Users\79171\Desktop\python_dz\dz9\fonebook\crud.py", line 51, in create
+    with open(db_file_name, 'a', newline='') as csv_file:
+FileNotFoundError: [Errno 2] No such file or directory: ''
+
+[30.09.2022 00:38:05 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:38:12 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:38:17 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:38:22 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:38:43 ] [INFO] [bot] [main: 20] => The user has selected item number 1
+[30.09.2022 00:39:00 ] [INFO] [bot] [main: 24] => The user has selected item number 2
+[30.09.2022 00:39:10 ] [INFO] [bot] [find_surname: 53] => User entered: {surname_it}
+[30.09.2022 00:43:12 ] [INFO] [bot] [main: 45] => The user has selected item number 6
+[30.09.2022 00:43:20 ] [INFO] [bot] [delete_contact: 96] => The user has selected item number 6.1
+[30.09.2022 00:43:34 ] [INFO] [bot] [delete_surname: 113] => User entered: {surname_it}
+[30.09.2022 00:43:43 ] [INFO] [bot] [delete_number: 143] => User entered: {user_id_it}
+[30.09.2022 00:46:42 ] [INFO] [bot] [main: 39] => The user has selected item number 5
+[30.09.2022 00:46:50 ] [INFO] [bot] [get_name: 74] => User entered: {name_it}
+[30.09.2022 00:46:58 ] [INFO] [bot] [get_surname: 82] => User entered: {surname_it}
+[30.09.2022 00:47:02 ] [INFO] [bot] [get_number: 90] => User entered: {number_it}
+[30.09.2022 00:47:20 ] [INFO] [bot] [main: 20] => The user has selected item number 1
