@@ -1,25 +1,19 @@
-from telegram import Bot, InlineKeyboardMarkup, InlineKeyboardButton
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, CallbackQueryHandler
+import telebot;
+bot = telebot.TeleBot(token='5799664180:AAGGMBl1cRpn7-xY3Brax7EqlhPWy8OXyeo')
 
 import crud as cr
 import logger as lg
 
-
-bot = Bot(token='5522192802:AAHjPjGVdY7Q25j_JaUrN7HjtfTt4YLjxIs')
-updater = Updater(token='5522192802:AAHjPjGVdY7Q25j_JaUrN7HjtfTt4YLjxIs')
-dispatcher = updater.dispatcher
-
 name_it = ''
 surname_it = ''
 number_it = ''
-email_it = ''
 user_id_it = ''
-new_number_it = ''
+
 
 @bot.message_handler(content_types=['text'])
 def main(message):
     if message.text == '/main':
-        bot.send_message(message.chat.id, f'Выбери пункт меню, введя соответствующую команду: \n/1 - Показать все записи.\n/2 - Найти номер по фамилии.\n/3 - Найти номер по имени.\n/4 - Поиск по номеру телефона.\n/5 - Добавить новую запись.\n/6 - Изменить существующую запись.\n/7 - Удалить запись.')
+        bot.send_message(message.chat.id, f'Выбери пункт меню, введя соответствующую команду: \n/1 - Показать все записи.\n/2 - Найти номер по фамилии.\n/3 - Найти номер по имени.\n/4 - Поиск по номеру телефона.\n/5 - Добавить новую запись.\n/6 - Удалить запись.')
         cr.init_data_base('base_phone.csv')
 
     elif message.text == '/1':
@@ -46,22 +40,12 @@ def main(message):
         bot.send_message(message.chat.id, f'Введите имя')
         bot.register_next_step_handler(message, get_name)
 
+
     elif message.text == '/6':
         lg.logging.info('The user has selected item number 6')
         bot.send_message(
-            message.chat.id, f'Какой контакт хотите изменить?\nУкажите по:\n/61 - Фамилии\n/62 - Имени\n/63 - Номеру телефона')
-        bot.register_next_step_handler(message, edit_entry)
-
-    elif message.text == '/7':
-        lg.logging.info('The user has selected item number 7')
-        bot.send_message(
-            message.chat.id, f'Выберите контакт, который хотите удалить?\nВыберите по:\n/71 - Фамилии\n/72 - Имени\n/73 - Номеру телефона')
+            message.chat.id, f'Выберите контакт, который хотите удалить?\nВыберите по:\n/61 - Фамилии\n/62 - Имени\n/63 - Номеру телефона')
         bot.register_next_step_handler(message, delete_contact)
-
-    else:
-        bot.send_message(
-            message.chat.id, f'Я тебя не понимаю. Введи: /help.')
-
 
 def find_surname(message):
     global surname_it
@@ -104,107 +88,24 @@ def get_number(message):
     global number_it
     number_it = message.text
     lg.logging.info('User entered: {number_it}')
-    bot.send_message(message.chat.id, f'Введите электронную почту')
-    bot.register_next_step_handler(message, get_email)
-
-
-def get_email(message):
-    global email_it
-    email_it = message.text
-    lg.logging.info('User entered: {email_it}')
-    cr.create(name_it, surname_it, number_it, email_it)
+    cr.create(name_it, surname_it, number_it)
     bot.send_message(message.chat.id, f'Контакт успешно добавлен!')
 
-
-def edit_entry(message):
+def delete_contact(message):
     if message.text == '/61':
         lg.logging.info('The user has selected item number 6.1')
         bot.send_message(message.chat.id, f'Введите фамилию')
-        bot.register_next_step_handler(message, change_surname)
+        bot.register_next_step_handler(message, delete_surname)
 
     elif message.text == '/62':
         lg.logging.info('The user has selected item number 6.2')
         bot.send_message(message.chat.id, f'Введите имя')
-        bot.register_next_step_handler(message, change_name)
+        bot.register_next_step_handler(message, delete_name)
 
     elif message.text == '/63':
         lg.logging.info('The user has selected item number 6.3')
         bot.send_message(message.chat.id, f'Введите номер телефона')
-        bot.register_next_step_handler(message, change_num)
-
-    else:
-        bot.send_message(
-            message.chat.id, f'Я тебя не понимаю. Введи: /help.')
-
-
-def change_name(message):
-    global name_it
-    name_it = message.text
-    lg.logging.info('User entered: {name_it}')
-    bot.send_message(message.chat.id, f'{cr.retrive(name=name_it)}')
-    bot.send_message(
-        message.chat.id, f'Введите id записи, которую хотите изменить')
-    bot.register_next_step_handler(message, change_number)
-
-
-def change_surname(message):
-    global surname_it
-    surname_it = message.text
-    lg.logging.info('User entered: {surname_it}')
-    bot.send_message(message.chat.id, f'{cr.retrive(surname=surname_it)}')
-    bot.send_message(
-        message.chat.id, f'Введите id записи, которую хотите изменить')
-    bot.register_next_step_handler(message, change_number)
-
-
-def change_num(message):
-    global number_it
-    number_it = message.text
-    lg.logging.info('User entered: {number_it}')
-    bot.send_message(message.chat.id, f'{cr.retrive(number=number_it)}')
-    bot.send_message(
-        message.chat.id, f'Введите id записи, которую хотите изменить')
-    bot.register_next_step_handler(message, change_number)
-
-
-def change_number(message):
-    global user_id_it
-    user_id_it = message.text
-    lg.logging.info('User entered: {user_id_it}')
-    bot.send_message(
-        message.chat.id, f'Введите новый номер телефона')
-    bot.register_next_step_handler(message, change_new_number)
-
-
-def change_new_number(message):
-    global new_number_it
-    new_number_it = message.text
-    lg.logging.info('User entered: {new_number_it}')
-    cr.update(id=user_id_it, new_number=new_number_it)
-    bot.send_message(
-        message.chat.id, f'Контакт успешно изменен!')
-
-
-def delete_contact(message):
-    if message.text == '/71':
-        lg.logging.info('The user has selected item number 7.1')
-        bot.send_message(message.chat.id, f'Введите фамилию')
-        bot.register_next_step_handler(message, delete_surname)
-
-    elif message.text == '/72':
-        lg.logging.info('The user has selected item number 7.2')
-        bot.send_message(message.chat.id, f'Введите имя')
-        bot.register_next_step_handler(message, delete_name)
-
-    elif message.text == '/73':
-        lg.logging.info('The user has selected item number 7.3')
-        bot.send_message(message.chat.id, f'Введите номер телефона')
         bot.register_next_step_handler(message, delete_num)
-
-    else:
-        bot.send_message(
-            message.chat.id, f'Я тебя не понимаю. Введи: /help.')
-
 
 def delete_surname(message):
     global surname_it
