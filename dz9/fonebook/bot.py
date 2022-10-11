@@ -1,5 +1,5 @@
 import telebot;
-bot = telebot.TeleBot(token='5799664180:AAGGMBl1cRpn7-xY3Brax7EqlhPWy8OXyeo')
+bot = telebot.TeleBot(token='  ')
 
 import crud as cr
 import logger as lg
